@@ -119,9 +119,10 @@ L'application démarre sur :\
 
 ## 👥 Équipe
 
+-   Noah\
 -   Louis\
-
--   -   noms restants si applicable
+-   Eva\
+-   Emilie\
 
 ------------------------------------------------------------------------
 
