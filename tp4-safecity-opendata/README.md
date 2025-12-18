@@ -77,7 +77,8 @@ cp .env.example .env
 Ajouter votre clé OpenAI :
 
     OPENAI_API_KEY="votre_clef"
-    OPENAI_MODEL="gpt-4o-mini"
+    PRIMARY_MODEL=gpt-4o-mini
+    SECONDARY_MODEL=gpt-4.1-mini
 
 ------------------------------------------------------------------------
 
