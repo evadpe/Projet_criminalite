@@ -1,48 +1,129 @@
-# 🏛️ SafeCity — Tableau de bord sécurité urbaine
+# 🏛️ SafeCity --- Analyse de la délinquance (Gendarmerie 2021)
 
-## 📋 Description
-SafeCity est une application Streamlit qui permet d'explorer les données de criminalité en France
-(crimes et délits), de les visualiser dans le temps et dans l'espace, et de générer des analyses
-automatiques grâce à l'IA (OpenAI via LiteLLM).
+Application interactive permettant d'explorer, analyser et visualiser
+les données officielles de la **gendarmerie nationale (année 2021)**,
+avec cartographie interactive, graphiques Plotly et analyse automatique
+via **IA (OpenAI / gpt-4o-mini)**.
 
-## 🎯 Fonctionnalités
-- Cartographie interactive des délits par zone
-- Analyse temporelle des tendances
-- Comparateur de territoires (départements / communes)
-- Assistant IA pour analyser les tendances et générer des rapports
-- Chatbot de questions / réponses sur les statistiques
+Ce projet a été réalisé dans le cadre du module **Open Data & IA**
+(IPSSI).
 
-## 🛠️ Installation
+------------------------------------------------------------------------
 
-```bash
-# Cloner le repo
-git clone <url-de-votre-repo>
-cd safecity-opendata
+## 📊 Fonctionnalités
 
-# Installer avec uv
-uv sync
+### 🔍 Exploration des données
 
-# Configurer les variables d'environnement
-cp .env.example .env
-# Puis éditer .env avec votre clé OpenAI
+-   Types d'infractions
+-   Compagnies et départements
+-   Filtrage dynamique multi-critères
+
+### 🗺️ Cartographie interactive
+
+-   Carte Folium (GeoJSON départemental)
+-   Choroplèthe dynamique
+
+### 📈 Visualisations interactives
+
+-   Répartition par compagnie
+-   Répartition par type d'infraction
+-   Top compagnies
+-   Graphiques Plotly Express
+
+### 🤖 IA intégrée (OpenAI)
+
+-   Résumés statistiques auto-générés
+-   Chatbot interactif
+-   Modèle utilisé : **gpt-4o-mini**
+
+------------------------------------------------------------------------
+
+## 🗂️ Structure du projet
+
+    app.py
+    utils/
+      data.py
+      charts.py
+      geo.py
+      chatbot.py
+    data/
+      processed/
+        crimes_2021.json
+        departements.geojson
+
+------------------------------------------------------------------------
+
+## 📦 Installation
+
+### 1. Cloner le dépôt
+
+``` bash
+git clone https://github.com/evadpe/Projet_criminalite
+cd Projet_criminalite
 ```
+
+### 2. Installer les dépendances
+
+``` bash
+uv sync
+```
+
+### 3. Configurer l'environnement
+
+``` bash
+cp .env.example .env
+```
+
+Ajouter votre clé OpenAI :
+
+    OPENAI_API_KEY="votre_clef"
+    OPENAI_MODEL="gpt-4o-mini"
+
+------------------------------------------------------------------------
 
 ## 🚀 Lancement
 
-```bash
+``` bash
 uv run streamlit run app.py
 ```
 
-## 📊 Sources de données (à brancher)
-- [Crimes et délits - Ministère de l'Intérieur](https://www.data.gouv.fr/fr/datasets/crimes-et-delits-enregistres-par-les-services-de-gendarmerie-et-de-police-depuis-2012/)
-- [Contours des départements (IGN / OSM)](https://www.data.gouv.fr/fr/datasets/contours-des-departements-francais-issus-d-openstreetmap/)
-- [Population INSEE](https://www.insee.fr/fr/statistiques/1893198)
+L'application démarre sur :\
+👉 http://localhost:8501/
 
-> ⚠️ Les fonctions de chargement de données sont fournies avec des exemples simplifiés.
-> À vous de remplacer les exemples par les vraies données issues de data.gouv.fr.
+------------------------------------------------------------------------
+
+## 📊 Sources de données
+
+-   Données officielles (gendarmerie 2021) --- Data.gouv\
+-   GeoJSON départements --- IGN / OSM (france-geojson)
+
+------------------------------------------------------------------------
+
+## 🛠️ Technologies
+
+### Backend
+
+-   Python 3.13\
+-   Pandas\
+-   DuckDB\
+-   OpenAI API
+
+### Frontend
+
+-   Streamlit\
+-   Plotly Express\
+-   Folium
+
+------------------------------------------------------------------------
 
 ## 👥 Équipe
-- À compléter
+
+-   Louis\
+
+-   -   noms restants si applicable
+
+------------------------------------------------------------------------
 
 ## 📄 Licence
+
 MIT
