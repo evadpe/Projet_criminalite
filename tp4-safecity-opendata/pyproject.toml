@@ -1,0 +1,20 @@
+[project]
+name = "safecity-dashboard"
+version = "0.1.0"
+description = "SafeCity — Tableau de bord sécurité urbaine (Open Data & IA)"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "streamlit",
+    "pandas",
+    "plotly",
+    "requests",
+    "python-dotenv",
+    "litellm",
+    "folium",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel",
+]

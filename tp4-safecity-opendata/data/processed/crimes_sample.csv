@@ -1,0 +1,8 @@
+annee,departement,lib_dpt,type_delit,nb_faits
+2022,75,Paris,Vols,120000
+2022,69,Rhône,Vols,60000
+2022,13,Bouches-du-Rhône,Vols,80000
+2022,75,Paris,Violences,50000
+2023,75,Paris,Vols,125000
+2023,69,Rhône,Violences,30000
+2023,13,Bouches-du-Rhône,Violences,45000
